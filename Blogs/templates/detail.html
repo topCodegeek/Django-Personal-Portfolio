@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<!doctype html>
+{% load static %}
+<head>
+    {% block title-block %}
+    <title>Blogs - {{ blog.title }}</title>
+    {% endblock %}
+{% block content %}
+</head>
+<head>
+<br>
+<div class = "container text-center" style="margin: 0 auto; max-width: 90%; min-width: 200px;">
+<h1 class="hmain">{{ blog.title }}</h1>
+<h4>
+<div class="row" id="memnblog">
+    <div class="col text-end navbar-collapse">
+        ~ On {{ blog.date|date:'dS M Y' }}, by <i>{{blog.author}}</i>
+    </div>
+</h4>
+<br><br><br><br>
+<h4 class="text-start" id="hsub">{{ blog.content|safe }}</h4>
+</div>
+{% endblock %}
+</head>
+</docttype>
