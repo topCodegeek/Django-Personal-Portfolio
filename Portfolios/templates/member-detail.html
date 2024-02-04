@@ -3,6 +3,7 @@
 <!doctype html>
 <head>
  {% block title-block %}
+ <!-- Page Title -->
 <title>{{ member.name }}</title>
 {% endblock %}
 </head>
@@ -11,6 +12,7 @@
 <body>
 <br>
 
+<!-- Title -->
 <div class="container text-center image-cropper">
 <br>
 <img src = "{{ member.profile_picture.url }}" height=350>
@@ -20,6 +22,7 @@
 <h5 id="memnblog">{{ member.description }}</h5>
 </div>
 
+<!-- Blog Title -->
 {% if blog_count > 0 %}
 <hr>
 <div class="container text-start">
@@ -27,6 +30,7 @@
 </div>
 <br><br>
 
+<!-- Blog List -->
 {% for blog in blogs %}
 
 <div class="container text-center image-cropper ">
