@@ -27,7 +27,7 @@
         {% for x in members %}
             <div class="media-element text-center ">
                 <a href = "{% url 'member_detail' x.id %}">
-                <img src = "{{ x.profile_picture }}" class="d-block mx-auto" height=200>
+                <img src = "{{ x.profile_picture.url }}" class="d-block mx-auto" height=200>
                 <h4 id="memnblog" style="font-size: 1.75rem;">{{ x.name }}</h4>
                 </a>
                 <h6 id="hsub" style="font-size: 1.25rem;">{{ x.description|truncatechars:20 }}</h6>
