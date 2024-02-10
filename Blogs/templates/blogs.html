@@ -44,6 +44,7 @@
     <h5 class="container text-start" id="hsub">{{ blog_count }} blog{{ blog_count|pluralize }} written till date.</h5>
     
 <!-- Blogs' List -->
+    <div class="container">
     {% for blog in first_five %}
         <br><br>
         <h5>
@@ -59,6 +60,7 @@
             <br>
         </div>
         {% endfor %}
+    </div>
 </div>
 {% endblock %}
 
