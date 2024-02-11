@@ -48,7 +48,6 @@
     {% for blog in first_five %}
         <br><br>
         <h5>
-        <div class="row">
             <div class="col text-start" id="hsub">
                 On {{ blog.date|date:'dS M Y' }}, by <i>{{blog.author}}</i>
             </div>
@@ -58,7 +57,6 @@
             </a>
             <h6 class="container text-start" id="hsub"><i>"{{ blog.content|striptags|truncatechars:75 }}</i></h6>
             <br>
-        </div>
         {% endfor %}
     </div>
 </div>
