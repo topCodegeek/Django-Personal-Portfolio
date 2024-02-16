@@ -18,12 +18,12 @@
     <h1 class="hmain">OUR BLOGS</h1>
     <br><br>
 
-<!-- Authors' List (Scroller) --> 
+<!-- Authors' List (Scroller) -->
     <h2 class="container text-start" id="memnblog">Authors:</h2>
     <br>
 
     <div class="media-scroller-container">
-        <div class="media-scroller image-cropper">    
+        <div class="media-scroller image-cropper">
         {% for x in members %}
             <div class="media-element text-center ">
                 <a href = "{% url 'member_detail' x.id %}">
@@ -42,23 +42,23 @@
 <!-- Blogs' Title and Count -->
     <h1 class = "container text-start" id="memnblog">All Blogs:</h1>
     <h5 class="container text-start" id="hsub">{{ blog_count }} blog{{ blog_count|pluralize }} written till date.</h5>
-    
+
 <!-- Blogs' List -->
+    <div class="container">
     {% for blog in first_five %}
         <br><br>
         <h5>
-        <div class="row">
             <div class="col text-start" id="hsub">
                 On {{ blog.date|date:'dS M Y' }}, by <i>{{blog.author}}</i>
             </div>
-            </h5>            
+            </h5>
             <a href = "{% url 'Blogs:detail' blog.id %}">
                 <h4 class = "alert alert-success" id="memnblog" style="font-size:1.75rem">{{ blog.title }}</h4>
             </a>
             <h6 class="container text-start" id="hsub"><i>"{{ blog.content|striptags|truncatechars:75 }}</i></h6>
             <br>
-        </div>
         {% endfor %}
+    </div>
 </div>
 {% endblock %}
 
